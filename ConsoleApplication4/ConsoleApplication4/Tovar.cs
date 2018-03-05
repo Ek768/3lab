@@ -16,5 +16,10 @@ namespace ConsoleApplication4
             this.ID = ID;
             this.Price = Price;
         }
+
+        public void Get_info ()
+        {
+            Console.WriteLine(ID.ToString() + " " + Price.ToString());
+        }
     }
 }

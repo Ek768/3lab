@@ -6,33 +6,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication4
 {
-    class Client
-    {
-        public string Family;
-        public string Name;
-        public string Middle_name;
-        public string products;
-        public int ID;
-        public int phone;
-
-        public void writeInConsoleClient(string Family, string Name, string Middle_name, string products, int ID, int phone)
-        {
-            Console.WriteLine("Фамилия: {0}\nИмя: {1}\nОтчество: {2}\nТовар: {3}\nID: {4}\nТелефон: {5}\n", Family, Name, Middle_name, products, ID, phone);
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Client myClient = new Client();
-            myClient.Family = "Артемьев";
-            myClient.Name = "Георгий";
-            myClient.Middle_name = "Васильевич";
-            myClient.products = "Гитара";
-            myClient.ID = 22;
-            myClient.phone = 30242;
+            Nomenklatura skripka_nomenklatura = new Nomenklatura("skripka", new DateTime(2018, 01, 28));
+            Nomenklatura gitara_nomenklatura = new Nomenklatura("gitara", new DateTime(2018, 02, 05));
+            Tovar skripka1 = new Tovar(skripka_nomenklatura, 6000);
+            Tovar skripka2 = new Tovar(skripka_nomenklatura, 7000);
+            Tovar gitara1 = new Tovar(gitara_nomenklatura, 15000);
+            Tovar gitara2 = new Tovar(gitara_nomenklatura, 20000);
 
-           myClient.writeInConsoleClient(myClient.Family, myClient.Name, myClient.Middle_name, myClient.products, myClient.ID, myClient.phone);
+            skripka1.Get_info();
             Console.ReadLine();
         }
     }
