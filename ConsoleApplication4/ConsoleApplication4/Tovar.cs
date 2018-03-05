@@ -8,5 +8,13 @@ namespace ConsoleApplication4
 {
     class Tovar
     {
+        public Nomenklatura ID { get; set; }
+        public double Price { get; set; }
+
+        public Tovar (Nomenklatura ID, double Price)
+        {
+            this.ID = ID;
+            this.Price = Price;
+        }
     }
 }
