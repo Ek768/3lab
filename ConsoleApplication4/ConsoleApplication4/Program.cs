@@ -18,7 +18,11 @@ namespace ConsoleApplication4
             Tovar gitara2 = new Tovar(gitara_nomenklatura, 20000);
 
             skripka1.Get_info();
+            skripka2.Get_info();
+            gitara1.Get_info();
+            gitara2.Get_info();
             Console.ReadLine();
+
         }
     }
 }
