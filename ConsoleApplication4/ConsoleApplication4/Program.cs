@@ -10,19 +10,23 @@ namespace ConsoleApplication4
     {
         static void Main(string[] args)
         {
+            List<Tovar> ListTovar = new List<Tovar>();
+
             Nomenklatura skripka_nomenklatura = new Nomenklatura("skripka", new DateTime(2018, 01, 28));
             Nomenklatura gitara_nomenklatura = new Nomenklatura("gitara", new DateTime(2018, 02, 05));
-            Tovar skripka1 = new Tovar(skripka_nomenklatura, 6000);
-            Tovar skripka2 = new Tovar(skripka_nomenklatura, 7000);
-            Tovar gitara1 = new Tovar(gitara_nomenklatura, 15000);
-            Tovar gitara2 = new Tovar(gitara_nomenklatura, 20000);
+            Nomenklatura baraban_nomenklatura = new Nomenklatura("baraban", new DateTime(2017, 01, 05));
+            ListTovar.Add(new Tovar(skripka_nomenklatura, 6000));
+            ListTovar.Add(new Tovar(skripka_nomenklatura, 7000));
+            ListTovar.Add(new Tovar(gitara_nomenklatura, 15000));
+            ListTovar.Add(new Tovar(gitara_nomenklatura, 20000));
+            ListTovar.Add(new Tovar(baraban_nomenklatura, 17000));
 
-            skripka1.Get_info();
-            skripka2.Get_info();
-            gitara1.Get_info();
-            gitara2.Get_info();
+            foreach (Tovar t in ListTovar)
+            {
+                t.Get_info();
+            }
+
             Console.ReadLine();
-
         }
     }
 }
